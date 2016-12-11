@@ -1,4 +1,3 @@
-
 Meteor.subscribe('posts')
 
 Template.postsList.helpers({
