@@ -1,15 +1,15 @@
 const postsData = [
     {
-        title: 'Introducing Telescope',
-        url: 'http://sachagreif.com/introducing-telescope/'
+        title: 'Guide Meteor',
+        url: 'https://guide.meteor.com'
     },
     {
-        title: 'Meteor',
-        url: 'http://meteor.com'
+        title: 'Guide Blaze',
+        url: 'http://blazejs.org'
     },
     {
-        title: 'The Meteor Book',
-        url: 'http://themeteorbook.com'
+        title: 'Doc Meteor',
+        url: 'https://github.com/meteor/docs'
     }
 ]
 
