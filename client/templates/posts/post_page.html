@@ -1,10 +1,6 @@
 <template name="postPage">
     {{#if Template.subscriptionsReady}}
-        <div class="post-page page">
-            {{#with post}}
-                {{> postItem}}
-            {{/with}}
-        </div>
+        {{> postItem post}}
     {{else}}
         <p>Loading...</p>
     {{/if}}
