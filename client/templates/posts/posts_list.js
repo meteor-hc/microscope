@@ -1,5 +1,5 @@
 Meteor.subscribe('posts')
 
 Template.postsList.helpers({
-    posts: Posts.find()
+   posts: () => Posts.find()
 })

@@ -1,5 +1,4 @@
 FlowRouter.route('/', {
-    action: function() {
+    action: () =>
         BlazeLayout.render("layout", {content: "postsList"})
-    }
 })
