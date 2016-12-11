@@ -6,9 +6,8 @@ Template.postItem.helpers({
     },
     pathForPost: function() {
         const params = { _id: this._id}
-        const routeName = 'postList'
-        console.log(params)
-        // FlowRouter.path(routeName, params, {})
+        const routeName = 'singlePost'
+        return FlowRouter.path(routeName, params)
         return `/post/${params._id}`
     }
 })

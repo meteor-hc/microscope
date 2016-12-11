@@ -4,6 +4,7 @@ FlowRouter.route('/', {
 })
 
 FlowRouter.route('/post/:_id', {
+    name: 'singlePost',
     action: () =>
         BlazeLayout.render("layout", {content: 'postPage'})
 })
