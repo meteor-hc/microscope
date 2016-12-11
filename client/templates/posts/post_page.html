@@ -1,0 +1,11 @@
+<template name="postPage">
+    {{#if Template.subscriptionsReady}}
+        <div class="post-page page">
+            {{#with post}}
+                {{> postItem}}
+            {{/with}}
+        </div>
+    {{else}}
+        <p>Loading...</p>
+    {{/if}}
+</template>
