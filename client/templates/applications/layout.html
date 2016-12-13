@@ -1,9 +1,7 @@
 <template name="layout">
     <section class="container">
         <header class="navbar navbar-default" role="navigation">
-            <nav>
-                <a class="navbar-brand" href="/">Microscope</a>
-            </nav>
+            {{> header}}
         </header>
         <main>
             {{> Template.dynamic template=content}}
