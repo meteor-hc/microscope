@@ -5,9 +5,11 @@ Template.postSubmit.events({
             url: event.target.url.value,
             title: event.target.title.value
         }
-
-        console.log('post before', post)
-        post._id = Posts.insert(post)
-        FlowRouter.go('singlePost', {_id: post._id})
+        Meteor.call('postInsert', post, (error, _id) => {
+            if (error) {
+                throw new Meteor.Error('Can\'t insert record', error.reason)
+            }
+            FlowRouter.go('singlePost', {_id: _id})
+        })
     }
 })
