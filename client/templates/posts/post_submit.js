@@ -5,11 +5,16 @@ Template.postSubmit.events({
             url: event.target.url.value,
             title: event.target.title.value
         }
-        Meteor.call('postInsert', post, (error, _id) => {
+        Meteor.call('postInsert', post, (error, result) => {
             if (error) {
                 throw new Meteor.Error('Can\'t insert record', error.reason)
             }
-            FlowRouter.go('singlePost', {_id: _id})
+
+            if (result.postExists) {
+                alert('This link has already been posted')
+            }
+
+            FlowRouter.go('singlePost', {_id: result._id})
         })
     }
 })
