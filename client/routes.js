@@ -14,12 +14,8 @@ FlowRouter.route('/denied', {
         BlazeLayout.render("layout", {content: 'accessDenied'})
 })
 
-FlowRouter.route('/denied', {
-    action: () =>
-        BlazeLayout.render("layout", {content: 'accessDenied'})
-})
-
 FlowRouter.route('/', {
+    name: 'postsList',
     action: () =>
         BlazeLayout.render("layout", {content: 'postsList'})
 })

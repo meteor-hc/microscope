@@ -1,5 +1,5 @@
 Template.postSubmit.events({
-    'submit'(event) {
+    'submit form'(event) {
         event.preventDefault()
         const post = {
             url: event.target.url.value,
@@ -13,7 +13,6 @@ Template.postSubmit.events({
             if (result.postExists) {
                 alert('This link has already been posted')
             }
-
             FlowRouter.go('singlePost', {_id: result._id})
         })
     }
