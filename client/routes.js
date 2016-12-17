@@ -27,13 +27,18 @@ FlowRouter.route('/post/:_id', {
 })
 
 FlowRouter.notFound = {
-    action: function() {
+    action: () =>
         BlazeLayout.render("layout", {content: 'notFound'})
-    }
 }
 
 loggin.route('/submit', {
     name: 'postSubmit',
     action: () =>
         BlazeLayout.render("layout", {content: 'postSubmit'})
+})
+
+loggin.route('/post/:_id/edit', {
+    name: 'postEdit',
+    action: () =>
+        BlazeLayout.render("layout", {content: 'postEdit'})
 })
