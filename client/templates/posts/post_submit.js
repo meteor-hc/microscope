@@ -20,10 +20,10 @@ Template.postSubmit.events({
         }
         Meteor.call('postInsert', post, (error, result) => {
             if (error) {
-              return throwError(error.reason)
+                return Errors.throw(error.reason)
             }
             if (result.postExists) {
-              throwError('This link has already been posted')
+                Errors.throw('This link has already been posted')
             }
             FlowRouter.go('singlePost', {_id: result._id})
         })

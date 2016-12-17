@@ -30,7 +30,7 @@ Template.postEdit.events({
         }
         Meteor.call('postUpdate', currentPostId, post, (error, result) => {
             if (error) {
-              return throwError(error.reason)
+              Errors.throw(error.reason)
             }
             FlowRouter.go('singlePost', {_id: currentPostId})
         })
