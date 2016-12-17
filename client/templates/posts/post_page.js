@@ -1,8 +1,8 @@
 Template.postPage.onCreated(function() {
-  const self = this
-  self.autorun(function() {
-    const postId = FlowRouter.getParam('_id')
-    self.subscribe('singlePost', postId)
+    const self = this
+    self.autorun(() => {
+        const postId = FlowRouter.getParam('_id')
+        self.subscribe('singlePost', postId)
   })
 })
 
