@@ -4,6 +4,9 @@ Template.postItem.helpers({
         a.href = this.url
         return a.hostname
     },
+    ownPost: function() {
+      return this.userId === Meteor.userId()
+    },
     pathForPost: function() {
         const params = { _id: this._id}
         const routeName = 'singlePost'
