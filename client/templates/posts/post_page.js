@@ -3,7 +3,7 @@ Template.postPage.onCreated(function() {
     self.autorun(() => {
         const postId = FlowRouter.getParam('_id')
         self.subscribe('singlePost', postId)
-        self.subscribe('comments')
+        self.subscribe('comments', postId)
     })
 })
 Template.postPage.helpers({
