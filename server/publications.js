@@ -1,4 +1,6 @@
 Meteor.publish('posts', () => Posts.find())
+Meteor.publish('comments', () => Comments.find())
+
 Meteor.publish('singlePost', id => {
   check(id, String)
   Meteor._sleepForMs(1000)
