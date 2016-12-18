@@ -4,7 +4,7 @@ Template.postPage.onCreated(function() {
         const postId = FlowRouter.getParam('_id')
         self.subscribe('singlePost', postId)
         self.subscribe('comments')
-  })
+    })
 })
 Template.postPage.helpers({
     post: () => Posts.findOne(),
