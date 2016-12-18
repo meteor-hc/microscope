@@ -12,5 +12,8 @@ Template.postItem.helpers({
         const routeName = 'singlePost'
         return FlowRouter.path(routeName, params)
         return `/post/${params._id}`
+    },
+    commentsCount: function() {
+        return Comments.find({postId: this._id}).count()
     }
 })

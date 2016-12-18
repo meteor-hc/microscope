@@ -4,9 +4,11 @@
             <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
             <p>
                 submitted by {{author}}
-                {{#if ownPost}}<a href="/post/{{_id}}/edit">Edit</a>{{/if}}
+                <a href="{{pathForPost}}">{{commentsCount}} commentaires</a>
             </p>
         </div>
-        <a href="{{pathForPost}}" class="discuss btn btn-default">Discuss</a>
+        {{#if ownPost}}
+            <a href="/post/{{_id}}/edit" class="discuss btn btn-default">Edit</a>
+        {{/if}}
     </div>
 </template>
